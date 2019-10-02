@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.nilesh.org/loanEligibility" 
+	xmlns:tns="http://www.nilesh.org/loanEligibility"
+	elementFormDefault="qualified">
+
+	<xs:element name="LoanRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="loanRequestData" type="tns:loanRequestComplex" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="LoanResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="loanResponseData" type="tns:loanResponseComplex" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="loanRequestComplex">
+		<xs:sequence>
+			<xs:element name="age" type="xs:int" />
+			<xs:element name="cibil" type="xs:int" />
+			<xs:element name="salary" type="xs:int" />
+			<xs:element name="resident" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="loanResponseComplex">
+		<xs:sequence>
+			<xs:element name="isEligible" type="xs:boolean" />
+			<xs:element name="approvedAmount" type="xs:long" />
+			<xs:element name="CriteriaMismatch" type="xs:string"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
