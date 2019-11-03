@@ -11,7 +11,7 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-
+   
 	<xs:element name="LoanResponse">
 		<xs:complexType>
 			<xs:sequence>
