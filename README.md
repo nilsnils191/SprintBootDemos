@@ -1,8 +1,6 @@
 # SprintBootDemos
-This is my first Spring boot demo with SOAP web services
- ------------------------------------------------------------------------------------------------------------------
- 
-        Sprint Boot Demo with H2 db ,JPA and Swagger UI
+
+# h2DbDemo - Sprint Boot Demo with H2 db ,JPA and Swagger UI
  
 # H2 internal database Url
 http://localhost:8080/h2-console/
