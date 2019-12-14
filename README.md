@@ -5,6 +5,14 @@
 # H2 internal database Url
 http://localhost:8080/h2-console/
 
+configurations while connecting with above url:
+Use below information and click on connect
+
+Driver class : org.h2.Driver
+JDBC URL : jdbc:h2:mem:testdb
+User     : sa
+
+
 # Swagger API 
 
 <dependency>
