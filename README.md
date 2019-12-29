@@ -4,6 +4,7 @@
  WSDL URL :
 http://localhost:8080/soapWS/eligibilityTest.wsdl
 
+XJC Command : xjc -d C:\Users\Nilesh\Desktop\test\output -p com.demo -wsdl C:\Users\Nilesh\Desktop\test\soap.wsdl
 ```
 
 # h2DbDemo 
