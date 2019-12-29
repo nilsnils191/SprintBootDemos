@@ -5,5 +5,5 @@
 // Generated on: 2019.12.29 at 08:32:12 PM IST 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.nilesh.org/loanEligibility", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package org.nilesh.loaneligibility;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.nilesh.org/loanEligibility/officeAddress", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package org.nilesh.loaneligibility.officeaddress;

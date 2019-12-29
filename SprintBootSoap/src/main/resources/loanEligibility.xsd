@@ -2,7 +2,12 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="http://www.nilesh.org/loanEligibility" 
 	xmlns:tns="http://www.nilesh.org/loanEligibility"
-	elementFormDefault="qualified">
+	xmlns:offAddr="http://www.nilesh.org/loanEligibility/officeAddress"
+	elementFormDefault="qualified"
+  	attributeFormDefault="unqualified" >
+
+<xs:import schemaLocation="officeAddressExample.xsd"
+               namespace="http://www.nilesh.org/loanEligibility/officeAddress" />
 
 	<xs:element name="LoanRequest">
 		<xs:complexType>
@@ -26,6 +31,17 @@
 			<xs:element name="cibil" type="xs:int" />
 			<xs:element name="salary" type="xs:int" />
 			<xs:element name="resident" type="xs:string" />
+			<xs:element name="homeAddress" type="tns:address"></xs:element>
+			<xs:element name="officeAddress" type="offAddr:officeAddress"></xs:element>
+		</xs:sequence>
+		
+	</xs:complexType>
+	
+	<xs:complexType name="address">
+		<xs:sequence>
+			<xs:element name="city" type="xs:string" />
+			<xs:element name="state" type="xs:string" />
+			<xs:element name="country" type="xs:string" />
 		</xs:sequence>
 	</xs:complexType>
 
