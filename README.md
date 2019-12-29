@@ -11,6 +11,9 @@ XJC Command : xjc -d C:\Users\Nilesh\Desktop\test\output -p com.demo -wsdl C:\Us
 If XSD having same element in multiple files then it will give us error like --> [ERROR] Two declarations cause a collision in the ObjectFactory class.
 
 So in order to resolve this problem do not use -p [package Name] i.e -p com.demo from above command.
+
+--> xjc -d C:\Users\Nilesh\Desktop\test\output -wsdl C:\Users\Nilesh\Desktop\test\soap.wsdl
+
 So it will generate different packages for different namespaces and those packages will have their own 
 object-factory and package-info
 ```
