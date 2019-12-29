@@ -7,6 +7,14 @@ http://localhost:8080/soapWS/eligibilityTest.wsdl
 XJC Command : xjc -d C:\Users\Nilesh\Desktop\test\output -p com.demo -wsdl C:\Users\Nilesh\Desktop\test\soap.wsdl
 ```
 
+```
+If XSD having same element in multiple files then it will give us error like --> [ERROR] Two declarations cause a collision in the ObjectFactory class.
+
+So in order to resolve this problem do not use -p [package Name] i.e -p com.demo from above command.
+So it will generate different packages for different namespaces and those packages will have their own 
+object-factory and package-info
+```
+
 # h2DbDemo 
 
 ```
