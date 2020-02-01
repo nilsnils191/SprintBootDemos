@@ -68,3 +68,25 @@ But above url is not human readable so swagger UI must be used
 # Swagger UI URL 
 
 http://localhost:8080/swagger-ui.html
+
+# Mtom.server
+
+WSDL : URL -> http://localhost:9090/ws/documents.wsdl
+
+In mtom attachment, with soap request need to attach files with part having content cid:XYZ....
+
+Request response sample can be find the project parent folder :-> SprintBootDemos\mtom-server\request_response.PNG
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mtom="https://github.com/ralfstuckert/mtom">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mtom:storeDocumentRequest>
+         <mtom:document>
+            <mtom:name>Nilesh</mtom:name>
+            <mtom:author>Nilu</mtom:author>
+            <mtom:content>cid:911834276216</mtom:content>
+         </mtom:document>
+      </mtom:storeDocumentRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
