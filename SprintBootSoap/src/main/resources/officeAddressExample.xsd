@@ -4,7 +4,7 @@
 	xmlns:offAddr="http://www.nilesh.org/loanEligibility/officeAddress"
 	elementFormDefault="qualified">
 
-	<xs:complexType name="officeAddress">
+	<xs:complexType name="address">
 		<xs:sequence>
 			<xs:element name="city" type="xs:string" />
 			<xs:element name="state" type="xs:string" />

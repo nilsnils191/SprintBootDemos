@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://www.nilesh.org/loanEligibility" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.nilesh.org/loanEligibility" targetNamespace="http://www.nilesh.org/loanEligibility">
+  <wsdl:types>
+    <xs:schema xmlns:offAddr="http://www.nilesh.org/loanEligibility/officeAddress" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.nilesh.org/loanEligibility">
+
+<xs:import namespace="http://www.nilesh.org/loanEligibility/officeAddress" schemaLocation="officeAddressExample.xsd"/>
+
+	<xs:element name="LoanRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="loanRequestData" type="tns:loanRequestComplex"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+   
+	<xs:element name="LoanResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="loanResponseData" type="tns:loanResponseComplex"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="loanRequestComplex">
+		<xs:sequence>
+			<xs:element name="age" type="xs:int"/>
+			<xs:element name="cibil" type="xs:int"/>
+			<xs:element name="salary" type="xs:int"/>
+			<xs:element name="resident" type="xs:string"/>
+			<xs:element name="homeAddress" type="tns:address"/>
+			<xs:element name="officeAddress" type="offAddr:address"/>
+		</xs:sequence>
+		
+	</xs:complexType>
+	
+	<xs:complexType name="address">
+		<xs:sequence>
+			<xs:element name="city" type="xs:string"/>
+			<xs:element name="state" type="xs:string"/>
+			<xs:element name="country" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="loanResponseComplex">
+		<xs:sequence>
+			<xs:element name="isEligible" type="xs:boolean"/>
+			<xs:element name="approvedAmount" type="xs:long"/>
+			<xs:element maxOccurs="unbounded" name="CriteriaMismatch" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="LoanRequest">
+    <wsdl:part element="tns:LoanRequest" name="LoanRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="LoanResponse">
+    <wsdl:part element="tns:LoanResponse" name="LoanResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="EligilityPorts">
+    <wsdl:operation name="Loan">
+      <wsdl:input message="tns:LoanRequest" name="LoanRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:LoanResponse" name="LoanResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EligilityPortsSoap11" type="tns:EligilityPorts">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Loan">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="LoanRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="LoanResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EligilityPortsService">
+    <wsdl:port binding="tns:EligilityPortsSoap11" name="EligilityPortsSoap11">
+      <soap:address location="http://localhost:8080/soapWS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
