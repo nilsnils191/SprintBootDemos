@@ -1,13 +1,13 @@
-package com.mvc.boot.springbootmvc;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-@SpringBootTest
-class SpringbootmvcApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
-}
+//package com.mvc.boot.springbootmvc;
+//
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
+//
+//@SpringBootTest
+//class SpringbootmvcApplicationTests {
+//
+//	@Test
+//	void contextLoads() {
+//	}
+//
+//}
