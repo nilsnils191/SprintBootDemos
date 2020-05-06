@@ -15,4 +15,25 @@ public class MainController {
 	public String login() {
 		return "login";
 	}
+	
+	@GetMapping("/home")
+	public String home() {
+		return "home";
+	}
+	
+	@GetMapping("/logout")
+	public String logout() {
+		return "logout";
+	}
+	
+	@GetMapping("/library")
+	public String library() {
+		return "library";
+	}
+	
+	@GetMapping("/marketing")
+	public String marketing() {
+		return "marketing";
+	}
+	
 }

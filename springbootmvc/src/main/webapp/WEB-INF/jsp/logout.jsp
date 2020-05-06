@@ -11,30 +11,14 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark" title="LMS">
- <a class="navbar-brand" href="#">
-    <img src="/images/lms_logo.png" alt="Logo" style="width:40px;">
-  </a>
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link " href="/home">HOME</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/library">Library</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/marketing">Marketing</a>
-    </li>
-    
-    
-    <li class="nav-item" style="align-content: stretch;">
-      <a class="nav-link" href="/login">Login</a>
-    </li>
-  </ul>
+<nav class="navbar navbar-expand-sm bg-da	rk navbar-dark" title="LMS">
+<!--  <a class="navbar-brand" href="#"> -->
+<!--     <img src="/images/lms_logo.png" alt="Logo" style="width:40px;"> -->
+<!--   </a> -->
 </nav>
 <br>
 <div>
-<img src="/images/susan-yin-2JIvboGLeho-unsplash.jpg" style="width:1300px;height: 400px;">
+ <p> Hello. Logout successful. <a class="navbar-brand" href="/login"> Login </a> again !!!</p>
 </div>
 
 

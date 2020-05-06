@@ -26,15 +26,14 @@
       <a class="nav-link" href="/marketing">Marketing</a>
     </li>
     
-    
     <li class="nav-item" style="align-content: stretch;">
-      <a class="nav-link" href="/login">Login</a>
+      <a class="nav-link" href="/logout">Logout</a>
     </li>
   </ul>
 </nav>
 <br>
 <div>
-<img src="/images/susan-yin-2JIvboGLeho-unsplash.jpg" style="width:1300px;height: 400px;">
+ <p> Hello. Welcome to Library Page !!!!!!!</p>
 </div>
 
 
